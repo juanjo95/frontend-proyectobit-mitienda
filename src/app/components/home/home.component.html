@@ -35,7 +35,7 @@
             </a>
         </div>
     </div>
-    <div class="row my-4">
+    <div class="row my-4 productResponsive">
         <ng-container *ngFor="let ranProduct of randomProducts">
             <div class="col-lg-3 col-md-3 card-group" *ngIf="randomProducts.length > 0">
                 <div class="card justify-content-center align-items-center">
@@ -54,10 +54,9 @@
             <owl-carousel-o [options]="customOptions">
                 <ng-container *ngFor="let ranProduct of randomProducts">
                     <ng-template carouselSlide *ngIf="randomProducts.length > 0">
-                        <div class="cardTwo h-100 d-flex flex-column justify-content-evenly">
+                        <div class="cardTwo h-100 d-flex flex-column justify-content-between">
                             <div class="d-flex align-items-center justify-content-center">
-                                <img [src]="ranProduct.image" class="imgCardResponsive"
-                                    alt="imagen-producto">
+                                <img [src]="ranProduct.image" class="imgCardResponsive" alt="imagen-producto">
                             </div>
                             <h5 class="info-card">{{ ranProduct.title }}</h5>
                             <p><strong>Precio: </strong>{{ ranProduct.price | currency:'$':'symbol':'.0-0' }}</p>
@@ -100,10 +99,9 @@
             <owl-carousel-o [options]="customOptions">
                 <ng-container *ngFor="let producto of listaProductos | slice:0:20" [ngSwitch]="producto.category">
                     <ng-template carouselSlide *ngSwitchCase="'celulares'">
-                        <div class="cardTwo h-100 d-flex flex-column justify-content-evenly">
+                        <div class="cardTwo h-100 d-flex flex-column justify-content-between">
                             <div class="d-flex align-items-center justify-content-center">
-                                <img [src]="producto.image" class="imgCardResponsive"
-                                    alt="imagen-producto">
+                                <img [src]="producto.image" class="imgCardResponsive" alt="imagen-producto">
                             </div>
                             <h5 class="info-card">{{ producto.title }}</h5>
                             <p><strong>Precio: </strong>{{ producto.price | currency:'$':'symbol':'.0-0' }}</p>
@@ -146,10 +144,9 @@
             <owl-carousel-o [options]="customOptionsTwo">
                 <ng-container *ngFor="let producto of listaProductos | slice:0:14" [ngSwitch]="producto.category">
                     <ng-template carouselSlide *ngSwitchCase="'tecnologia'">
-                        <div class="cardTwo h-100 d-flex flex-column justify-content-evenly">
+                        <div class="cardTwo h-100 d-flex flex-column justify-content-between">
                             <div class="d-flex align-items-center justify-content-center">
-                                <img [src]="producto.image" class="imgCardResponsive"
-                                    alt="imagen-producto">
+                                <img [src]="producto.image" class="imgCardResponsive" alt="imagen-producto">
                             </div>
                             <h5 class="info-card">{{ producto.title }}</h5>
                             <p><strong>Precio: </strong>{{ producto.price | currency:'$':'symbol':'.0-0' }}</p>
@@ -192,10 +189,9 @@
             <owl-carousel-o [options]="customOptionsThree">
                 <ng-container *ngFor="let producto of listaProductos | slice:0:7" [ngSwitch]="producto.category">
                     <ng-template carouselSlide *ngSwitchCase="'moda'">
-                        <div class="cardTwo h-100 d-flex flex-column justify-content-evenly">
+                        <div class="cardTwo h-100 d-flex flex-column justify-content-between">
                             <div class="d-flex align-items-center justify-content-center">
-                                <img [src]="producto.image" class="imgCardResponsive"
-                                    alt="imagen-producto">
+                                <img [src]="producto.image" class="imgCardResponsive" alt="imagen-producto">
                             </div>
                             <h5 class="info-card">{{ producto.title }}</h5>
                             <p><strong>Precio: </strong>{{ producto.price | currency:'$':'symbol':'.0-0' }}</p>
@@ -238,10 +234,9 @@
             <owl-carousel-o [options]="customOptionsFour">
                 <ng-container *ngFor="let producto of listaProductos | slice:0:20" [ngSwitch]="producto.category">
                     <ng-template carouselSlide *ngSwitchCase="'bisuteria'">
-                        <div class="cardTwo h-100 d-flex flex-column justify-content-evenly">
+                        <div class="cardTwo h-100 d-flex flex-column justify-content-between">
                             <div class="d-flex align-items-center justify-content-center">
-                                <img [src]="producto.image" class="imgCardResponsive"
-                                    alt="imagen-producto">
+                                <img [src]="producto.image" class="imgCardResponsive" alt="imagen-producto">
                             </div>
                             <h5 class="info-card">{{ producto.title }}</h5>
                             <p><strong>Precio: </strong>{{ producto.price | currency:'$':'symbol':'.0-0' }}</p>
